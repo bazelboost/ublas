@@ -1,0 +1,27 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "boost.ublas",
+    hdrs = glob([
+        "include/**/*.hpp",
+        "include/**/*.h",
+    ]),
+    includes = ["include"],
+    deps = [
+        "@boost.compute",
+        "@boost.concept_check",
+        "@boost.config",
+        "@boost.core",
+        "@boost.interval",
+        "@boost.iterator",
+        "@boost.mpl",
+        "@boost.range",
+        "@boost.serialization",
+        "@boost.smart_ptr",
+        "@boost.static_assert",
+        "@boost.type_traits",
+        "@boost.typeof",
+    ],
+)
